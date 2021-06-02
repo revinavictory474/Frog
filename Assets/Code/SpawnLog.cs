@@ -6,16 +6,25 @@ namespace Frog
 {
     public class SpawnLog : MonoBehaviour
     {
-        // Start is called before the first frame update
+        [SerializeField] private Object _logs;
+        [SerializeField] private Transform _spawnPosition;
+
+
         void Start()
         {
-
+            StartCoroutine(SpawnLogs());
         }
 
-        // Update is called once per frame
-        void Update()
+        private void Repeat()
         {
+            StartCoroutine(SpawnLogs());
+        }
 
+        private IEnumerator SpawnLogs()
+        {
+            yield return new WaitForSeconds(Random.Range(2,4));
+            Instantiate(_logs, _spawnPosition.position, Quaternion.identity);
+            Repeat();
         }
     }
 }
