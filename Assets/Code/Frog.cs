@@ -2,83 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Frog
+namespace FrogGame
 {
     public class Frog : MonoBehaviour
     {
-        [SerializeField] private GameObject _mouthClose;
-        [SerializeField] private GameObject _mouthOpen;
-        [SerializeField] private GameObject _maggotBounce;
-        [SerializeField] private GameObject _logBounce;
-        [SerializeField] private GameObject _death;
+        internal FrogTriggerZone _triggerZone;
+
+        [SerializeField] internal GameObject _mouthClose;
+        [SerializeField] internal GameObject _mouthOpen;
+        [SerializeField] internal GameObject _maggotBounce;
+        [SerializeField] internal GameObject _logBounce;
+        [SerializeField] internal GameObject _death;
 
         public bool isDeath;
-        private bool isCollision;
-        private bool isClicked;
+        internal bool isCollision;
+        internal bool isClicked;
+        internal bool isOpenMouth;
 
+        private void Awake()
+        {
+            _triggerZone = GetComponent<FrogTriggerZone>();
+        }
         void Update()
         {
             ClickFrog();
-            Death();
+            //Death();
         }
-
-        public void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (!isDeath)
-            {
-                if (collision.CompareTag("Log"))
-                {
-                    isCollision = true;
-                    isDeath = false;
-                    _logBounce.SetActive(true);
-                    _maggotBounce.SetActive(false);
-                    _mouthClose.SetActive(false);
-                    _mouthOpen.SetActive(false);
-                    _death.SetActive(false);
-                    Debug.Log("LOG");
-                }
-                else if (collision.CompareTag("Maggot"))
-                {
-                    isCollision = true;
-                    isDeath = false;
-                    _maggotBounce.SetActive(true);
-                    _logBounce.SetActive(false);
-                    _mouthClose.SetActive(false);
-                    _mouthOpen.SetActive(false);
-                    _death.SetActive(false);
-                    Debug.Log("MAGGOT");
-                }
-                else
-                {
-                    isDeath = false;
-                    _mouthClose.SetActive(true);
-                }
-                //StartCoroutine(ChangingSprites());
-            }
-        }
-
-        //private IEnumerator ChangingSprites()
-        //{
-        //    if (isCollision)
-        //    {
-        //        _mouthClose.SetActive(true);
-        //        _maggotBounce.SetActive(false);
-        //        _logBounce.SetActive(false);
-        //        _mouthOpen.SetActive(false);
-        //        _death.SetActive(false);
-        //    }
-        //    else
-        //    {
-        //        _mouthClose.SetActive(true);
-        //        _maggotBounce.SetActive(false);
-        //        _logBounce.SetActive(false);
-        //        _mouthOpen.SetActive(false);
-        //        _death.SetActive(false);
-        //    }
-        //    yield return new WaitForSeconds(1);
-        //}
-
-
+        
         private void ClickFrog()
         {
             if (!isDeath)
@@ -87,6 +37,7 @@ namespace Frog
                 {
                     isClicked = true;
                     isDeath = false;
+                    isOpenMouth = true;
                     _mouthOpen.SetActive(true);
                     _mouthClose.SetActive(false);
                     _death.SetActive(false);
@@ -97,6 +48,7 @@ namespace Frog
                 {
                     isClicked = false;
                     isDeath = false;
+                    isOpenMouth = false;
                     _mouthClose.SetActive(true);
                     _mouthOpen.SetActive(false);
                     _death.SetActive(false);
@@ -106,7 +58,15 @@ namespace Frog
             }
         }
 
-        private void Death()
+        //private void Death()
+        //{
+        //    if (_triggerZone._countHits >= 3)
+        //    {
+        //        SpriteDeath();
+        //    }
+        //}
+
+        private void SpriteDeath()
         {
             if (isDeath)
             {
@@ -118,6 +78,5 @@ namespace Frog
                 _logBounce.SetActive(false);
             }
         }
-
     }
 }

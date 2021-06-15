@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace FrogGame
 {
-    public class GameStarter : MonoBehaviour
+    public class Log : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()
