@@ -7,6 +7,7 @@ namespace FrogGame
     public class Frog : MonoBehaviour
     {
         internal FrogTriggerZone _triggerZone;
+        public static Frog frogue;
 
         [SerializeField] internal GameObject _mouthClose;
         [SerializeField] internal GameObject _mouthOpen;
@@ -21,6 +22,11 @@ namespace FrogGame
 
         private void Awake()
         {
+            if (frogue == null)
+                frogue = this;
+            else
+                Destroy(gameObject);
+
             _triggerZone = GetComponent<FrogTriggerZone>();
         }
         void Update()
@@ -28,6 +34,7 @@ namespace FrogGame
             ClickFrog();
             //Death();
         }
+
         
         private void ClickFrog()
         {
@@ -71,6 +78,7 @@ namespace FrogGame
             if (isDeath)
             {
                 isDeath = true;
+                isOpenMouth = false;
                 _death.SetActive(true);
                 _mouthClose.SetActive(false);
                 _mouthOpen.SetActive(false);

@@ -6,11 +6,13 @@ namespace FrogGame
 {
     public class Maggot : MonoBehaviour
     {
+
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.tag == "Player")
+            if (other.tag == "Player" && Frog.frogue.isOpenMouth)
             {
                 Debug.Log("EAT MAGGOT trigger");
+                FrogTriggerZone.frogTriggerZone._countHits++;
                 Destroy(gameObject);
             }
         }

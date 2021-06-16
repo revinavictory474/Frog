@@ -7,15 +7,26 @@ namespace FrogGame
 {
     public class FrogTriggerZone : MonoBehaviour
     {
+        public static FrogTriggerZone frogTriggerZone;
+
         [SerializeField] private Frog _frog;
         [SerializeField] private Text _score;
 
         internal int _countFail;
         internal int _countHits;
 
+        private void Awake()
+        {
+            if (frogTriggerZone == null)
+                frogTriggerZone = this;
+            else Destroy(gameObject);
+        }
+
         private void Update()
         {
             Debug.Log(_countHits);
+
+            Debug.Log(_countFail);
         }
 
         public void OnTriggerEnter2D(Collider2D collision)
@@ -27,12 +38,11 @@ namespace FrogGame
                     _frog.isCollision = true;
                     _frog.isDeath = false;
                     SpriteLogBounce();
-                    Debug.Log("LOG");
 
                     if (_frog.isOpenMouth)
                     {
                         Debug.Log("FAIL");
-                        _countFail++;
+                        SpriteOpenMouth();
                     }
                 }
                 else if (collision.CompareTag("Maggot"))
@@ -40,8 +50,12 @@ namespace FrogGame
                     _frog.isCollision = true;
                     _frog.isDeath = false;
                     SpriteMaggotBounce();
-                    _countHits++;
-                    Debug.Log("MAGGOT");
+
+                    if (_frog.isOpenMouth)
+                    {
+                        Debug.Log("WIN");
+                        SpriteOpenMouth();
+                    }
 
                 }
                 else
@@ -68,10 +82,20 @@ namespace FrogGame
 
         private void SpriteCloseMouth()
         {
+            _frog.isOpenMouth = false;
             _frog._mouthClose.SetActive(true);
             _frog._maggotBounce.SetActive(false);
             _frog._logBounce.SetActive(false);
             _frog._mouthOpen.SetActive(false);
+            _frog._death.SetActive(false);
+        }
+
+        private void SpriteOpenMouth()
+        {
+            _frog._mouthOpen.SetActive(true);
+            _frog._mouthClose.SetActive(false);
+            _frog._maggotBounce.SetActive(false);
+            _frog._logBounce.SetActive(false);
             _frog._death.SetActive(false);
         }
 
