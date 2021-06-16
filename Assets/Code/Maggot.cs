@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static FrogGame.FrogTriggerZone;
+using static FrogGame.Frog;
 
 namespace FrogGame
 {
@@ -9,10 +11,10 @@ namespace FrogGame
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.tag == "Player" && Frog.frogue.isOpenMouth)
+            if (other.tag == "Player" && frogue.isOpenMouth)
             {
                 Debug.Log("EAT MAGGOT trigger");
-                FrogTriggerZone.frogTriggerZone._countHits++;
+                frogTriggerZone._countHits++;
                 Destroy(gameObject);
             }
         }

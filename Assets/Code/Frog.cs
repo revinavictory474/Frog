@@ -6,7 +6,6 @@ namespace FrogGame
 {
     public class Frog : MonoBehaviour
     {
-        internal FrogTriggerZone _triggerZone;
         public static Frog frogue;
 
         [SerializeField] internal GameObject _mouthClose;
@@ -27,7 +26,6 @@ namespace FrogGame
             else
                 Destroy(gameObject);
 
-            _triggerZone = GetComponent<FrogTriggerZone>();
         }
         void Update()
         {
