@@ -13,7 +13,7 @@ namespace FrogGame
         {
             if (other.tag == "Player" && frogue.isOpenMouth)
             {
-                lifeChange.logsEat++;
+                lifeChange.failPoints--;
                 Debug.Log("EAT LOG trigger");
                 frogTriggerZone._countFail++;
 

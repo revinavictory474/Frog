@@ -28,7 +28,7 @@ public class SpawnLogAndMaggot : MonoBehaviour
         {
             int random = Random.Range(0, logAndMaggotList.Count);
 
-            GameObject newObject = Instantiate(logAndMaggotList[random], pointToSpawn, Quaternion.Euler(0, 0, Random.Range(-25, 25)));
+            GameObject newObject = Instantiate(logAndMaggotList[random], pointToSpawn, Quaternion.Euler(0, 0, Random.Range(-180, 180)));
 
             logAndMaggotList.RemoveAt(random);
 
