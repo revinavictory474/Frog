@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnLogAndMaggot : MonoBehaviour
 {
     public GameObject[] logAndMaggot;
-    public float timeBonusSpawn;
+    private float timeBonusSpawn = 1.5f;
     public Vector2 pointToSpawn;
     private List<GameObject> logAndMaggotList = new List<GameObject>();
 

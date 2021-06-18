@@ -8,7 +8,6 @@ namespace FrogGame
     {
         [SerializeField] internal GameObject[] accessibleLife;
         public static SpriteLifeChange lifeChange;
-        public int logsEat;
         public int failPoints = 3;
 
         private void Awake()
