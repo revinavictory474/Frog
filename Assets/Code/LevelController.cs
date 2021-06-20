@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using static FrogGame.SpriteLifeChange;
+using static FrogGame.Frog;
 
 public class LevelController : MonoBehaviour
 {
@@ -16,6 +15,7 @@ public class LevelController : MonoBehaviour
     {
         if(lifeChange.failPoints <= 0 && !isPause)
         {
+            frog.isDeath = true;
             GamePause();
         }
     }

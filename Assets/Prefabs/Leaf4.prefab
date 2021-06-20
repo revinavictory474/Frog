@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8281608797101955847}
   - component: {fileID: 8281608797101955848}
-  - component: {fileID: 1253833892111303998}
+  - component: {fileID: -6172164753688121542}
   m_Layer: 0
   m_Name: Leaf4
   m_TagString: Untagged
@@ -84,19 +84,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &1253833892111303998
-Animation:
+--- !u!95 &-6172164753688121542
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8281608797101955849}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 57fa1cef67aff924b90158996a5636ce, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 57fa1cef67aff924b90158996a5636ce, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 620516358e41ff64bb52bf15053ec4ad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -5,7 +5,6 @@ using static FrogGame.SpriteLifeChange;
 
 public class DestroyAll : MonoBehaviour
 {
-
     private BoxCollider2D _boundareCollider;
     private Vector2 _viewportSize;
 

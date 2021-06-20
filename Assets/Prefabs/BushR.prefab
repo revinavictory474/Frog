@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8025891001803200988}
   - component: {fileID: 8025891001803200991}
   - component: {fileID: 8931653051195604817}
-  - component: {fileID: 5318049122505751846}
   m_Layer: 0
   m_Name: BushR
   m_TagString: Untagged
@@ -104,18 +103,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &5318049122505751846
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8025891001803200990}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 9909e7b56d14b9a45b40c6a843618c8b, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0

@@ -6,9 +6,10 @@ namespace FrogGame
 {
     public class SpriteLifeChange : MonoBehaviour
     {
+        internal static SpriteLifeChange lifeChange;
+
         [SerializeField] internal GameObject[] accessibleLife;
-        public static SpriteLifeChange lifeChange;
-        public int failPoints = 3;
+        internal int failPoints = 3;
 
         private void Awake()
         {
@@ -38,8 +39,6 @@ namespace FrogGame
             {
                 accessibleLife[0].SetActive(false);
             }
-
-            Debug.Log("currentlogeat" + failPoints);
         }
     }
 }

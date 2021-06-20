@@ -6,10 +6,12 @@ using static FrogGame.FrogTriggerZone;
 
 public class OutputScore : MonoBehaviour
 {
-    public static OutputScore outputScore;
-    public Text textScore;
+    internal static OutputScore outputScore;
+
+    [SerializeField] internal Text textScore;
 
     private void Awake()
+
     {
         if (outputScore == null)
             outputScore = this;
@@ -18,7 +20,11 @@ public class OutputScore : MonoBehaviour
 
     void Update()
     {
+        TextScoreOutput();
+    }
+
+    private void TextScoreOutput()
+    {
         textScore.text = frogTriggerZone._countHits.ToString();
-        
     }
 }

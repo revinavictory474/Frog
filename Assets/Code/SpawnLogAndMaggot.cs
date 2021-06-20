@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SpawnLogAndMaggot : MonoBehaviour
 {
-    public GameObject[] logAndMaggot;
+    [SerializeField] private GameObject[] logAndMaggot;
+    [SerializeField] private Vector2 pointToSpawn;
+
     private float timeBonusSpawn = 1.5f;
-    public Vector2 pointToSpawn;
     private List<GameObject> logAndMaggotList = new List<GameObject>();
 
 

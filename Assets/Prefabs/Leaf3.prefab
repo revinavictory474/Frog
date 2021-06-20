@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6752097745427879797}
   - component: {fileID: 6752097745427879796}
-  - component: {fileID: 8915697622528998662}
   - component: {fileID: 3400929867641742543}
   m_Layer: 0
   m_Name: Leaf3
@@ -85,22 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &8915697622528998662
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6752097745427879787}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 0e5a46e5ab7cff642b57430a46736ead, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 0e5a46e5ab7cff642b57430a46736ead, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &3400929867641742543
 Animator:
   serializedVersion: 3

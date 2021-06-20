@@ -357,8 +357,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dffdb13402cba747bf72fc531251ac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frog: {fileID: 1556078353}
-  _score: {fileID: 0}
 --- !u!1 &479540828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,6 +1178,7 @@ GameObject:
   - component: {fileID: 1556078351}
   - component: {fileID: 1556078353}
   - component: {fileID: 1556078352}
+  - component: {fileID: 1556078354}
   m_Layer: 8
   m_Name: _____Frog_____
   m_TagString: Player
@@ -1240,7 +1239,18 @@ MonoBehaviour:
   _maggotBounce: {fileID: 820811103}
   _logBounce: {fileID: 565029079}
   _death: {fileID: 1923007286}
-  isDeath: 0
+--- !u!114 &1556078354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556078350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3143482ecfc6ef942b1239d43143178e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1562995851
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,7 +1318,6 @@ MonoBehaviour:
   - {fileID: 1662486455}
   - {fileID: 965515453}
   - {fileID: 734981500}
-  failPoints: 3
 --- !u!114 &1562995855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7029,7 +7038,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5cfa5856362b0c44b914f6396b8088cb, type: 3}
 --- !u!1001 &4558328526343066122
 PrefabInstance:
@@ -7086,7 +7096,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leaf5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3944756214622645916, guid: 538ea018f14e0d8418da6a0e10a22be1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 538ea018f14e0d8418da6a0e10a22be1, type: 3}
 --- !u!1001 &6007434182365102377
 PrefabInstance:
@@ -7143,7 +7154,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BushL
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 6815f5b7930f8664a8aaba18b58881ff, type: 3}
 --- !u!1001 &6432500932727825482
 PrefabInstance:
@@ -7200,7 +7212,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b74ba7de3555e594dbd5021ac77f16ab, type: 3}
 --- !u!1001 &6752097745565690084
 PrefabInstance:
@@ -7257,23 +7270,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8915697622528998662, guid: e837818af33faf94298980f618c7cee8, type: 3}
-      propertyPath: m_Animation
-      value: 
-      objectReference: {fileID: 7400000, guid: 0e5a46e5ab7cff642b57430a46736ead, type: 2}
-    - target: {fileID: 8915697622528998662, guid: e837818af33faf94298980f618c7cee8, type: 3}
-      propertyPath: m_Animations.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8915697622528998662, guid: e837818af33faf94298980f618c7cee8, type: 3}
-      propertyPath: m_Animations.Array.data[0]
-      value: 
-      objectReference: {fileID: 7400000, guid: 0e5a46e5ab7cff642b57430a46736ead, type: 2}
-    - target: {fileID: 8915697622528998662, guid: e837818af33faf94298980f618c7cee8, type: 3}
-      propertyPath: m_Animations.Array.data[1]
-      value: 
-      objectReference: {fileID: 7400000, guid: 0e5a46e5ab7cff642b57430a46736ead, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: e837818af33faf94298980f618c7cee8, type: 3}
 --- !u!1001 &8025891002192738218
 PrefabInstance:
@@ -7330,7 +7328,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BushR
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 359eac3127afdbc419d6cf2ef83677ae, type: 3}
 --- !u!1001 &8281608797882569839
 PrefabInstance:
@@ -7387,5 +7386,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leaf4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 2026cd6c59e9946449106ca1edfd24be, type: 3}

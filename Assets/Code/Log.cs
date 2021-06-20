@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using static FrogGame.SpriteLifeChange;
-using static FrogGame.FrogTriggerZone;
 using static FrogGame.Frog;
 
 namespace FrogGame
@@ -11,11 +8,9 @@ namespace FrogGame
     {
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.tag == "Player" && frogue.isOpenMouth)
+            if (other.tag == "Player" && frog.isOpenMouth)
             {
                 lifeChange.failPoints--;
-                Debug.Log("EAT LOG trigger");
-                frogTriggerZone._countFail++;
 
                 Destroy(gameObject);
             }

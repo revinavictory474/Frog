@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6432500931299357134}
   - component: {fileID: 6432500931299357129}
   - component: {fileID: 7990277064178597477}
-  - component: {fileID: 6309228406039299316}
   m_Layer: 0
   m_Name: Leaf2
   m_TagString: Untagged
@@ -104,18 +103,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &6309228406039299316
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6432500931299357128}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: da9ae7eb9a57edf489d7aadcb53cfdd5, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
