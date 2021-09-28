@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Log
+  - Maggot
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Collision
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 3206813061
+    locked: 0
+  - name: Frog
+    uniqueID: 278782305
+    locked: 0
+  - name: Menu
+    uniqueID: 2442824375
+    locked: 0
+  - name: Open eye
+    uniqueID: 1779111775
+    locked: 0
+  - name: Pupil
+    uniqueID: 1399764249
+    locked: 0
+  - name: Close eye
+    uniqueID: 114342193
+    locked: 0
+  - name: Leafs
+    uniqueID: 2565563707
+    locked: 0
+  - name: SettingMenu
+    uniqueID: 1368638993
+    locked: 0
